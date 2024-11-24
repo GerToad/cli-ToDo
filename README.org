@@ -1,0 +1,95 @@
+#+TITLE: CLI To-Do Application
+#+AUTHOR: GerToad
+#+DATE: [2024-11-13]
+#+DESCRIPTION: A Command Line Interface (CLI) tool for managing to-do lists.
+#+OPTIONS: toc:2
+
+* Introduction
+This is a simple and efficient Command Line Interface (CLI) application for managing to-do lists. 
+It allows users to create, view, update, and delete tasks directly from their terminal.
+
+* Features
+- Add tasks to your to-do list.
+- Mark tasks as completed.
+- Edit existing tasks.
+- Delete tasks.
+- View all tasks in a structured format.
+
+* Requirements
+- **Go** (>=1.18)
+- **Git** (optional, for cloning the repository)
+
+* Installation
+Clone the repository and build the project:
+
+#+BEGIN_SRC bash
+git clone git@github.com:GerToad/cli-ToDo.git
+cd cli-ToDo
+go build -o todo
+#+END_SRC
+
+The binary will be generated in the current directory as ~todo~. You can move it to a directory in your ~PATH~ for easy access:
+
+#+BEGIN_SRC bash
+mv todo /usr/local/bin/
+#+END_SRC
+
+* Usage
+Run the ~todo~ command to interact with the CLI tool.
+
+** Adding a Task
+#+BEGIN_SRC bash
+todo add "Buy groceries"
+#+END_SRC
+
+** Viewing Tasks
+#+BEGIN_SRC bash
+todo list
+#+END_SRC
+
+** Marking a Task as Complete
+#+BEGIN_SRC bash
+todo complete 1
+#+END_SRC
+
+** Deleting a Task
+#+BEGIN_SRC bash
+todo delete 1
+#+END_SRC
+
+** Editing a Task
+#+BEGIN_SRC bash
+todo edit 1 "Buy groceries and fruits"
+#+END_SRC
+
+* Roadmap
+- [ ] Add due dates for tasks.
+- [ ] Support categories and tags.
+- [ ] Enable priority levels (e.g., high, medium, low).
+- [ ] Add color-coded output for better visibility.
+
+* Contributing
+Contributions are welcome! If you have suggestions or find issues, please open a pull request or submit an issue on the GitHub repository.
+
+** Steps to Contribute
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+   #+BEGIN_SRC bash
+   git checkout -b feature/new-feature
+   #+END_SRC
+3. Commit your changes and push them to your fork.
+4. Open a pull request with a description of your changes.
+
+* License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+* Author
+- GerToad
+- GitHub: https://github.com/GerToad
+
+* Contact
+If you have any questions or feedback, feel free to reach out via GitHub issues or directly at ~gerardo@example.com~.
+
+* Acknowledgments
+- Inspired by the simplicity of other CLI tools.
+- Thanks to the Go community for making development fun and efficient.
